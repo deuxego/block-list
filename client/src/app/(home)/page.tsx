@@ -1,46 +1,21 @@
 'use client';
 
-import { useSession } from '@/entities/session';
-import { SignOutButton, protectedPage } from '@/features/auth';
-import { UiButton } from '@/shared/ui/ui-button';
+import { protectedPage } from '@/features/auth';
+import { ToggleBlockingButton } from '@/features/toggle-blocking';
 import { UiHeader } from '@/shared/ui/ui-header';
-import { UiLink } from '@/shared/ui/ui-link';
-import { UiSelectField } from '@/shared/ui/ui-select-field';
-import { UiSpinner } from '@/shared/ui/ui-spinner';
-import { UiTextField } from '@/shared/ui/ui-text-field';
+import { Profile } from '@/widgets/profile';
 
 function Home() {
-  const { data } = useSession();
-
   return (
-    <div>
-      <UiHeader
-        right={
-          <div>
-            {data?.email} <SignOutButton />
-          </div>
-        }
-      />
+    <div className="min-h-screen flex flex-col">
+      <UiHeader right={<Profile />} />
 
-      <UiButton variant="primary">Primary</UiButton>
-      <UiButton variant="secondary">Secondary</UiButton>
-      <UiButton variant="outlined">Outlined</UiButton>
-      <UiButton disabled variant="outlined">
-        Outlined
-      </UiButton>
-
-      <UiTextField
-        label="Text Field"
-        inputProps={{ placeholder: 'Enter email' }}
-      />
-      <UiTextField error="Error" inputProps={{ placeholder: 'Enter email' }} />
-      <UiTextField />
-
-      <UiSelectField options={[{ value: '1', label: 'Option' }]} />
-
-      <UiLink href={'/'}>v,dkvdkdkv</UiLink>
-      <UiSpinner className="h-14 w-14 text-teal-600" />
-      {/* <UiPageSpinner /> */}
+      <div className="grid grid-cols-[200px_1fr]">
+        <aside className="px-5 pt-10">
+          <ToggleBlockingButton />
+        </aside>
+        <main>Block List</main>
+      </div>
     </div>
   );
 }

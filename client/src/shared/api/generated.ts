@@ -30,7 +30,6 @@ export interface SignUpBodyDto {
 export type AddBlockItemDtoType =
   (typeof AddBlockItemDtoType)[keyof typeof AddBlockItemDtoType];
 
-// eslint-disable-next-line @typescript-eslint/no-redeclare
 export const AddBlockItemDtoType = {
   Website: 'Website',
   KeyWord: 'KeyWord'
@@ -45,7 +44,6 @@ export interface AddBlockItemDto {
 export type BlockItemDtoType =
   (typeof BlockItemDtoType)[keyof typeof BlockItemDtoType];
 
-// eslint-disable-next-line @typescript-eslint/no-redeclare
 export const BlockItemDtoType = {
   Website: 'Website',
   KeyWord: 'KeyWord'

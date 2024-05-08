@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev --turbo",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p 3001",
     "lint": "next lint",
     "api:generate": "orval",
     "api:download": "curl http://localhost:3000/api-yaml -O src/shared/api/schema.yaml"
