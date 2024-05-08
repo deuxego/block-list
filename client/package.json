@@ -11,7 +11,9 @@
     "api:download": "curl http://localhost:3000/api-yaml -O src/shared/api/schema.yaml"
   },
   "dependencies": {
+    "@tanstack/react-query": "^5.35.1",
     "axios": "^1.6.8",
+    "clsx": "^2.1.1",
     "next": "14.2.3",
     "react": "^18",
     "react-dom": "^18"
