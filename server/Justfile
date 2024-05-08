@@ -2,4 +2,4 @@ want NAME:
   nest g mo {{NAME}} && nest g co {{NAME}} --no-spec && nest g s {{NAME}} --no-spec
 
 pg:
-  npx prisma db push && npx prisma generate
+  npx prisma generate && npx prisma db push
