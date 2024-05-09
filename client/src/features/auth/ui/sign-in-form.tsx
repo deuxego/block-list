@@ -28,7 +28,7 @@ export const SignInForm = () => {
         Sign In
       </UiButton>
 
-      <UiLink href={ROUTES.SIGN_IN}>Create account</UiLink>
+      <UiLink href={ROUTES.SIGN_UP}>Create account</UiLink>
     </form>
   );
 };

@@ -36,7 +36,6 @@ export const AddBlockItemDtoType = {
 } as const;
 
 export interface AddBlockItemDto {
-  blockListId: number;
   data: string;
   type: AddBlockItemDtoType;
 }

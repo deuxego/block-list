@@ -15,6 +15,7 @@ export const useSignOut = () => {
     mutationFn: authControllerSignOut,
     onSuccess() {
       router.push(ROUTES.SIGN_IN);
+      queryClient.clear();
       resetSession();
     }
   });
